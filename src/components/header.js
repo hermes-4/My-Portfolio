@@ -3,7 +3,11 @@ import "../styles/style.css";
 import me from "../images/me.png";
 
 const Header = () => {
-    return <div className="doc"></div>;
+    return (
+        <div className="header">
+            <h2>MY PORTFOLIO</h2>
+        </div>
+    );
 };
 
 export default Header;
