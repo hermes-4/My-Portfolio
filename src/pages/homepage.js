@@ -5,6 +5,7 @@ import Welcome from "../components/welcome";
 import About from "../components/about";
 import Education from "../components/education";
 import JoinMe from "../components/joinme";
+import Footer from "../components/footer";
 
 const Homepage = () => (
     <div className="doc">
@@ -13,6 +14,7 @@ const Homepage = () => (
         <About />
         <Education />
         <JoinMe />
+        <Footer />
     </div>
 );
 

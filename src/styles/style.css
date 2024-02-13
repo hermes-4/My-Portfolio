@@ -1,4 +1,5 @@
 .doc {
+    font-family: "Work Sans", Montserrat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +25,7 @@
 }
 
 .about {
+    display: block;
     height: 400px;
     background-color: #e8f5f9;
     color: #333333;
@@ -43,7 +45,6 @@
 .me {
     float: left;
     width: 60%;
-    height: 80%;
 }
 
 .edu {
@@ -73,4 +74,85 @@
 .j-content {
     width: 40%;
     height: 50%;
+}
+
+.footer {
+    background-color: #e2e2e2;
+    color: #242424;
+    height: 200px;
+}
+
+.caption p {
+    color: rgb(141, 40, 40);
+}
+
+form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+form label {
+    width: calc(50% - 50%);
+    margin-right: 10px;
+}
+
+form button {
+    width: 80px;
+}
+
+@media screen and (max-width: 520px) {
+    .header {
+        height: 120px;
+        font-size: x-large;
+    }
+
+    .welcome {
+        height: 110px;
+        font-size: larger;
+    }
+    .about {
+        height: auto; /* Remove fixed height */
+    }
+
+    .me {
+        width: 100%; /* Set image width to 100% on smaller screens */
+        float: none; /* Remove float */
+        clear: both; /* Clear floats */
+    }
+
+    .about-content {
+        float: none; /* Remove float */
+        width: 90%; /* Set content width to 100% on smaller screens */
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .edu {
+        height: auto;
+    }
+
+    .edu-content {
+        width: 90%;
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+
+    .j {
+        height: auto;
+    }
+
+    .j-content {
+        width: 90%;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    form {
+        display: block;
+    }
 }

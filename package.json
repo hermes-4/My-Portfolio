@@ -6,7 +6,9 @@
         "@testing-library/jest-dom": "^5.17.0",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
+        "axios": "^1.6.7",
         "bootstrap": "^5.3.2",
+        "nodemailer": "^6.9.9",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-scripts": "^3.0.1",
@@ -14,7 +16,7 @@
     },
     "scripts": {
         "start": "set PORT=3006 && react-scripts --openssl-legacy-provider start",
-        "build": "react-scripts build",
+        "build": "react-scripts  --openssl-legacy-provider build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
