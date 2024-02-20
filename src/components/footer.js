@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 const Footer = () => {
     const [recipientEmail, setRecepientEmail] = useState("");
@@ -13,11 +13,11 @@ const Footer = () => {
         setMessage(e.target.value);
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         try {
-            const response = axios.await("api/submit-form", {
+            const response = await fetch("api/submit-form", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -39,7 +39,7 @@ const Footer = () => {
             <div className="caption">
                 <p>Send a mail to the creator of this website</p>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form name="messageForm" onSubmit={handleSubmit}>
                 <label className="email">
                     Sender's email address:
                     <br />
@@ -66,7 +66,7 @@ const Footer = () => {
                 </label>
                 <br />
                 <button type="submit">Submit</button>
-                {submissionStatus && alert({ status })}
+                {submissionStatus && console.log({ status })}
             </form>
         </div>
     );
